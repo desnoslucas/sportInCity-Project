@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Add events</title>
+</head>
+<body>
+<header th:include="header.html"/>
+<h1>Ajouter un événement</h1>
+
+<form action="#" th:action="@{/addEvents}" enctype="multipart/form-data" method="post" th:object="${sportEvents}">
+
+    <p>Nom
+        <input id="name" type="text" th:field="*{name}">
+    </p>
+    <p>description
+        <input id="description"  type="text" th:field="*{description}">
+    </p>
+    <p>Prix
+        <input id="price" type="text" th:field="*{price}">
+    </p>
+
+    <p>Affiche événement
+        <input id="file" type="file" th:field="*{file}">
+    </p>
+
+
+    <button id="sendadd" type="submit">Ajouter</button>
+
+</form>
+</body>
+</html>

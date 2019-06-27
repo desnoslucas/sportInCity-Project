@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sport Event</title>
+</head>
+<body>
+<h1 th:text="${event.name}"></h1>
+
+<table>
+    <tr>
+        <th>Description</th>
+        <th>Prix</th>
+        <th>Ville</th>
+        <th>Type de sport</th>
+        <th>Mois</th>
+        <th>Image</th>
+    </tr>
+    <tr>
+        <td th:text="${event.description}"></td>
+        <td th:text="${event.price}"></td>
+        <td th:text="${event.city.name}"></td>
+        <td th:text="${event.sportType.name}"></td>
+        <td th:text="${event.months.name}"></td>
+        <td><img th:src="@{'/img/'+${event.pictureName}}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

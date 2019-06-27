@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>mulitpartFile</title>
+</head>
+<body>
+<h1>Add a file</h1>
+
+
+<form action="upload.php" th:action="@{/addEvents}" method="post" th:object="${sportEvents}">
+    <p>Name
+        <input type="text" th:field="*{name}">
+    </p>
+
+
+    <button type="submit">Add picture</button>
+
+</form>
+
+</body>
+</html>

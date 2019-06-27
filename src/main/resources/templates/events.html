@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Events</title>
+</head>
+<body>
+<header th:include="header.html"/>
+
+<table>
+    <tr>
+        <th>Nom des événements</th>
+    </tr>
+    <tr th:each="event: ${sportEvents}">
+        <td>
+            <a th:href="@{'/'+ ${event.id}}" th:text="${event.name}"></a>
+
+        </td>
+    </tr>
+</table>
+
+<a href="/addEvents">Add events</a>
+
+
+</body>
+</html>
